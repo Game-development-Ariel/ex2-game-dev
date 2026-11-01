@@ -43453,6 +43453,104 @@ MonoBehaviour:
   moveSpeed: 5
   turnSpeed: 720
   body: {fileID: 2100000012}
+  moveAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: 80a7d99c-5d83-4d8d-bc51-36b1748451eb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2DVector
+      m_Id: 3a15f161-19db-470b-9cb0-bbc2f53ca503
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 4
+    - m_Name: Up
+      m_Id: 62c74fab-2132-4d85-a1d9-a4eb3c88fd3f
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 8
+    - m_Name: Down
+      m_Id: 5cc1b0ee-b3d7-46f4-88c7-56b599c1fc6f
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 8
+    - m_Name: Left
+      m_Id: c0ab7878-49d8-43fc-a0a7-53437d00ae7c
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 8
+    - m_Name: Right
+      m_Id: 39b0f9e5-be11-406d-be5e-9715e5c3660a
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 8
+    - m_Name: 2DVector
+      m_Id: 35b71da5-1b62-42e3-aeb3-6a4ca7173367
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 4
+    - m_Name: Up
+      m_Id: 1f28281c-c7ee-41aa-b228-839e3f35745e
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 8
+    - m_Name: Down
+      m_Id: 4b058cce-0f9b-441f-ae44-45ff1d910ee9
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 8
+    - m_Name: Left
+      m_Id: a9d5f76c-3171-4ab5-89e6-f9fe5a54f77a
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 8
+    - m_Name: Right
+      m_Id: 15d44536-a31d-488c-8622-6355e092aa07
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 8
+    - m_Name: 
+      m_Id: 5a88a89a-5325-4080-b8c0-553974a16389
+      m_Path: <Gamepad>/leftStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
 --- !u!1 &2100000011
 GameObject:
   m_ObjectHideFlags: 0
@@ -43749,6 +43847,24 @@ MonoBehaviour:
   dotSize: 10
   frameColor: {r: 0, g: 0, b: 0, a: 0.85}
   playerColor: {r: 1, g: 0.85, b: 0.2, a: 1}
+  toggleAction:
+    m_Name: 
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 593c683b-1fd1-4011-84a7-e6dcaee72c37
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: f3e9f88e-d425-47c4-b767-3f62162d3822
+      m_Path: <Keyboard>/m
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
