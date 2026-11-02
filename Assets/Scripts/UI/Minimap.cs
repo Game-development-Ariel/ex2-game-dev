@@ -19,11 +19,10 @@ public class Minimap : MonoBehaviour
     // The camera has to stand in front of the map, which is at z = 0.
     private const float MinimapCameraZ = -10f;
 
-    // The UI sizes below are measured on a screen of this size, and scale to other screens.
-    private static readonly Vector2 ReferenceResolution = new Vector2(1920f, 1080f);
-
-    // In CanvasScaler, 1 means that the UI scales by the height of the screen.
-    private const float MatchScreenHeight = 1f;
+    // The UI sizes below are measured on a screen whose short side has this many pixels.
+    // We scale by the short side because it stays the same when the phone is rotated,
+    // so the minimap keeps its size in both landscape and portrait.
+    private const float ReferenceShortSide = 1080f;
 
     [Tooltip("The tilemap that the minimap shows")]
     [SerializeField] private Tilemap mapBounds;
@@ -57,8 +56,14 @@ public class Minimap : MonoBehaviour
     private Bounds worldBounds;
 
     private Camera minimapCamera;
+    private RenderTexture texture;
     private GameObject canvasObject;
+    private CanvasScaler scaler;
     private RectTransform playerDot;
+
+    // The screen size we last scaled the UI to, so we only recalculate when it changes.
+    private int lastScreenWidth;
+    private int lastScreenHeight;
 
     /// <summary>
     /// Adds the default key, so the action works without setting it in the Inspector.
@@ -94,14 +99,29 @@ public class Minimap : MonoBehaviour
 
         int textureWidth = Mathf.RoundToInt(height * aspect * TextureResolutionScale);
         int textureHeight = Mathf.RoundToInt(height * TextureResolutionScale);
-        var texture = new RenderTexture(textureWidth, textureHeight, TextureDepthBits);
+        texture = new RenderTexture(textureWidth, textureHeight, TextureDepthBits);
 
         CreateCamera(texture);
         CreateUI(texture, aspect);
+        UpdateUIScale();
+    }
+
+    /// <summary>The texture is not freed automatically, so we release it with the minimap.</summary>
+    private void OnDestroy()
+    {
+        if (texture != null)
+        {
+            texture.Release();
+        }
     }
 
     private void Update()
     {
+        if (Screen.width != lastScreenWidth || Screen.height != lastScreenHeight)
+        {
+            UpdateUIScale();
+        }
+
         if (toggleAction.WasPressedThisFrame())
         {
             ToggleVisible();
@@ -111,6 +131,16 @@ public class Minimap : MonoBehaviour
         {
             MoveDotToPlayer();
         }
+    }
+
+    /// <summary>Scales the UI by the short side of the screen, so rotating the phone doesn't change its size.</summary>
+    private void UpdateUIScale()
+    {
+        lastScreenWidth = Screen.width;
+        lastScreenHeight = Screen.height;
+
+        int shortSide = Mathf.Min(Screen.width, Screen.height);
+        scaler.scaleFactor = shortSide / ReferenceShortSide;
     }
 
     /// <summary>Shows or hides the minimap. The camera stops too, so it costs nothing while hidden.</summary>
@@ -156,10 +186,9 @@ public class Minimap : MonoBehaviour
         canvasObject.transform.SetParent(transform, false);
         canvasObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
 
-        var scaler = canvasObject.GetComponent<CanvasScaler>();
-        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        scaler.referenceResolution = ReferenceResolution;
-        scaler.matchWidthOrHeight = MatchScreenHeight;
+        // We set the scale ourselves in UpdateUIScale, so the scaler doesn't change it on its own.
+        scaler = canvasObject.GetComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ConstantPixelSize;
 
         // The frame: anchored to the top-right corner, and a bit bigger than the map.
         Image frame = CreateGraphic<Image>("Frame", canvasObject.transform);
