@@ -21,3 +21,11 @@
 כתבנו את הסקריפט [OrientationCameraSize](Assets/Scripts/Camera/OrientationCameraSize.cs) ושמנו אותו על המצלמה הראשית. הוא משנה רק את orthographicSize ולא נוגע באף עצם אחר.
 
 הגודל שמוגדר ב Inspector הוא הגודל למצב אופקי. כשהמסך עובר למצב אנכי, הסקריפט מכפיל אותו ביחס בין הצד הארוך לצד הקצר של המסך, וככה העצמים נשארים באותו גודל.
+
+## סקר שוק
+
+לכל אחד משלושת הרעיונות שלנו יש דוח, וכל דוח נמצא גם במאגר של אותו רעיון:
+
+* [אור במנהרה](market-research/Light-in-the-Tunnel/Market_Research.md) - הרעיון שבחרנו להמשיך איתו
+* [ביטקוין קבור](market-research/Buried-Bitcoin/Market_Research.md)
+* [בר הבלנדים](market-research/Vino-Blend-Bar/Market_Research.md)
