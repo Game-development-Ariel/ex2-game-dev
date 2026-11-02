@@ -2,7 +2,7 @@
 
 משחק דו ממדי שבנינו ביוניטי במסגרת מטלה 2. השחקן זז במנהרות חשוכות עם פנס, ובפינה הימנית העליונה יש מפה קטנה שמראה איפה הוא נמצא.
 
-קישור למשחק ב itch.io: [LINK TO ITCH.IO PAGE](https://YOUR-TEAM.itch.io/YOUR-GAME)
+קישור למשחק ב itch.io: [Tunnel Map](https://game-dev-ariel.itch.io/tunnel-map)
 
 ## איך משחקים
 

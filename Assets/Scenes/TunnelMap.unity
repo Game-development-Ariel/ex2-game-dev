@@ -43455,7 +43455,7 @@ MonoBehaviour:
   turnSpeed: 720
   body: {fileID: 2100000012}
   moveAction:
-    m_Name: 
+    m_Name: Move
     m_Type: 0
     m_ExpectedControlType: Vector2
     m_Id: 80a7d99c-5d83-4d8d-bc51-36b1748451eb
@@ -43468,7 +43468,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 4
     - m_Name: Up
       m_Id: 62c74fab-2132-4d85-a1d9-a4eb3c88fd3f
@@ -43476,7 +43476,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 8
     - m_Name: Down
       m_Id: 5cc1b0ee-b3d7-46f4-88c7-56b599c1fc6f
@@ -43484,7 +43484,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 8
     - m_Name: Left
       m_Id: c0ab7878-49d8-43fc-a0a7-53437d00ae7c
@@ -43492,7 +43492,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 8
     - m_Name: Right
       m_Id: 39b0f9e5-be11-406d-be5e-9715e5c3660a
@@ -43500,7 +43500,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 8
     - m_Name: 2DVector
       m_Id: 35b71da5-1b62-42e3-aeb3-6a4ca7173367
@@ -43508,7 +43508,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 4
     - m_Name: Up
       m_Id: 1f28281c-c7ee-41aa-b228-839e3f35745e
@@ -43516,7 +43516,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 8
     - m_Name: Down
       m_Id: 4b058cce-0f9b-441f-ae44-45ff1d910ee9
@@ -43524,7 +43524,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 8
     - m_Name: Left
       m_Id: a9d5f76c-3171-4ab5-89e6-f9fe5a54f77a
@@ -43532,7 +43532,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 8
     - m_Name: Right
       m_Id: 15d44536-a31d-488c-8622-6355e092aa07
@@ -43540,7 +43540,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 8
     - m_Name: 
       m_Id: 5a88a89a-5325-4080-b8c0-553974a16389
@@ -43548,7 +43548,7 @@ MonoBehaviour:
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: 
+      m_Action: Move
       m_Flags: 0
     m_Flags: 0
     m_Priority: 0
